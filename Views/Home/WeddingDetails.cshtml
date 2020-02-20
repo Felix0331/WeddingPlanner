@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>@ViewBag.Wedder1 and @ViewBag.Wedder2 's wedding!</h1> <br>
+    <h2>@ViewBag.WeddingDate</h2> <br>
+
+    <h2>Guests:</h2> <br>
+        @* @if(ViewBag.GuestList == "NoGuest")
+        {
+            <h3>No guests have RSVP'd to this wedding. You suck ASSSSSS!</h3>
+        }
+        else { *@
+            @foreach (var guest in ViewBag.GuestList)
+            {
+                <h3>@guest.User.FirstName @guest.User.LastName</h3>
+            }
+        @* } *@
+
+
+</body>
+</html>

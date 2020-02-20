@@ -1,0 +1,17 @@
+@using WeddingPlanner.Models
+@model LoginChecker
+
+<div class="text-center" style ="display: inline-block;">
+    <form asp-action="LoginUser" asp-controller="Home" method="post">
+
+        <span asp-validation-for="LoginEmail"></span>
+        <label asp-for="LoginEmail"></label>
+        <input asp-for="LoginEmail">
+
+        <span asp-validation-for="LoginPassword"></span>
+        <label asp-for="LoginPassword"></label>
+        <input type="password" asp-for="LoginPassword">
+
+        <button>Login</button>
+    </form>
+</div>
